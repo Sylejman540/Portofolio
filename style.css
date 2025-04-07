@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     background-color: #282c33;
     font-family: Fira Code;
@@ -34,7 +33,6 @@ button:hover {
     display: flex;
     justify-content: flex-end;
 }
-
 /* ========================================
    NAV-BAR
    Positions and styles the top navigation.
@@ -46,6 +44,7 @@ button:hover {
     margin-top: 20px;
     color: white;
     font-size: 1.2rem;
+
 }
 
 .nav-bar span{
@@ -56,13 +55,24 @@ button:hover {
     display: flex;
     align-items: center;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 30px;
     line-height: 20.99px;
+
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(500%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
 
 .logo a{
     text-decoration: none;
     color: white;
+    animation: slideLeft 1s ease-in forwards;
 }
   
   /* Hide the menu icon by default (will display on small screens) */
@@ -96,6 +106,16 @@ nav a {
     display: flex;
     margin-top: 123px;
     justify-content: space-between;
+    animation: fadeIn, 2s, ease forwards;
+}
+
+@keyframes fadeIn{
+    from{
+        transform:translateY(300%);
+    }
+    to{
+        transform:translateY(0);
+    }
 }
 
 .banner-header {
@@ -283,9 +303,14 @@ button a{
     display: flex;
 }
 
+.mobile{
+    display: flex;
+    justify-content: space-between;
+}
+
 .languages {
     margin-top: 50px;
-    margin-left: 20px;
+    margin-right: 80px;
     justify-content: center;
     color: white;
     line-height: 2;
@@ -293,7 +318,7 @@ button a{
 
 .language1 {
     display: grid;
-    margin-left: 20px;
+    margin-left: 80px;
     justify-content: center;
     align-items: end;
     color: white;
@@ -517,6 +542,17 @@ footer {
     color: #fff;
 }
 
+
+.discord{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.discord-p{
+    margin-top: 8px;
+}
+
 /* RESPONSIVE STYLES (max-width: 768px) */
 @media only screen and (max-width: 768px) {
 
@@ -536,6 +572,11 @@ footer {
 
     .nav-bar{
         flex-direction: column;
+    }
+
+    #navLinks {
+        display: none;
+        flex-direction: column; /* so items stack when shown */
     }
 
     .menu-icon{
@@ -647,28 +688,18 @@ footer {
         text-align: center;
     }
 
-    .language1 {
+    .mobile{
         display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        justify-content: space-around;
+        overflow: auto;
     }
-
     .languages{
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     .skill-border{
         margin-left: 20px;
         margin-top: 20px;
-    }
-
-    .language2{
-        margin-top: px;
-        margin-bottom: 20px;
     }
 
     .project1-image{
@@ -699,29 +730,6 @@ footer {
     }
 }
 
-
-@keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(10px); /* starts slightly below */
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  
-  /* 2. Slide In from Left (for the logo or nav) */
-  @keyframes slideInLeft {
-    0% {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
   
 .btn1:hover,
 .btn2:hover,
@@ -730,10 +738,6 @@ footer {
     transition: box-shadow 0.3s ease-in-out;
 }
   
-  
-.logo{
-    animation: slideInLeft 1s ease forwards;
-}
   
 .banner-header h4{
     animation: fadeIn 1.2s ease forwards;
