@@ -623,13 +623,13 @@ footer {
         line-height: 1;
         cursor: pointer;
         user-select: none;
-        transition: transform 0.3s ease;
-      }
-      
-      /* if you spin it on open */
-      .menu-icon.open {
-        transform: rotate(90deg);
-      }
+        cursor: pointer;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .menu-icon.rotate {
+        transform: rotate(180deg);
+    }
 
     nav a {
         display: flex;
