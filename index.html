@@ -3,25 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/Group 46.svg">
+    <link rel="icon" href="images/Group%2046.svg" type="image/svg+xml">
     <title>Sylejman</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
-
+    
     <!-- NAV-BAR: Top navigation -->
     <div class="nav-bar">
         <div class="logo">
-            <a href="javascript:void(0);" onclick="window.location.reload();">    
+          <img src="images/Logo (2).svg" alt="Logo">
+          <a href="javascript:void(0);" onclick="window.location.reload();">    
             Sylejman
-            <img src="images/Logo (2).svg" alt="Logo">
-            </a> 
+          </a> 
         </div>
-
-        <div class="menu-icon" onclick="toggleMenu()">
-          &#9776;  
-        </div>
+        
+        <!-- add id="menuIcon" -->
+        <div class="menu-icon" id="menuIcon" onclick="toggleMenu()">
+            &#9776;  <!-- hamburger -->
+          </div>
       
         <nav id="navLinks">
           <a href="#" class="active"><span>#</span>home</a>
@@ -30,7 +31,6 @@
           <a href="#contact"><span>#</span>contacts</a>
         </nav>
       </div>
-
     
     <div class="wrapper">
 
@@ -69,8 +69,9 @@
             <div class="projects">
                 <div class="work">
                     <img src="images/nav-logo.png" alt="Project preview" width="80%"><br>
+                             <hr class="text-gray-500">
                     <span>HTML, CSS, JS</span>
-                    <hr>
+                    <hr class="text-gray-500">
                     <h2>An2Tech</h2>
                     <span>Website Hosted</span><br>
                     <button class="btn2"><a href="https://www.an2tech.com/" target="_blank">Click here</a></button>
@@ -78,8 +79,9 @@
 
                 <div class="work">
                     <img src="images/quiz.png" alt="Project preview" width="90%"><br>
+                    <hr class="text-gray-500">
                     <span>HTML, CSS, JS, PHP</span>
-                    <hr>
+                    <hr class="text-gray-500">
                     <h2>QuizGrad</h2>
                     <span>Quiz for the final exam</span><br>
                     <button class="btn2">Click here</button>
@@ -87,8 +89,9 @@
 
                 <div class="work">
                     <img src="images/Group 46.svg" alt="Project preview" width="140%"><br>
+                    <hr class="text-gray-500">
                     <span>HTML, CSS, JS</span>
-                    <hr>
+                    <hr class="text-gray-500">
                     <h2>Portfolio Revamp</h2>
                     <span>Modern personal landing page</span><br>
                     <button class="btn2"><a href="https://sylejman.dev/" target="_blank">Click here</button></a>
@@ -218,13 +221,12 @@
         </div>
         <!-- END CONTACT -->
 
-        <hr>
+        <hr class="text-gray-500">
     
         <!-- FOOTER: Final credits/info -->
         <div class="footer">
             <div class="footer-header">
-                <h3>Sylejman
-                    <img src="images/Logo (2).svg" alt="Logo"></h3>
+                <h3>Sylejman Durguti</h3>
                 <p>Web designer and front-end developer</p>
             </div>
             <div class="media1">
