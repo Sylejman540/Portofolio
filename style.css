@@ -34,6 +34,8 @@ button:hover {
     justify-content: flex-end;
 }
 
+
+
 /* ============================
    NEW ANIMATIONS
    ============================ */
@@ -46,13 +48,13 @@ button:hover {
 
 /* Slide in from left */
 @keyframes slideInLeft {
-  from { transform: translateX(-100%); opacity: 0; }
+  from { transform: translateX(-60%); opacity: 0; }
   to   { transform: translateX(0);      opacity: 1; }
 }
 
 /* Slide in from right */
 @keyframes slideInRight {
-  from { transform: translateX(100%); opacity: 0; }
+  from { transform: translateX(50%); opacity: 0; }
   to   { transform: translateX(0);     opacity: 1; }
 }
 
@@ -614,8 +616,20 @@ footer {
 
     .menu-icon {
         display: grid;
-        flex-direction: column;
-    }
+        place-items: center;    /* center the character */
+        width: 2.5rem;          /* fixed box */
+        height: 2.5rem;
+        font-size: 2rem;        /* same size for ☰ and ✕ */
+        line-height: 1;
+        cursor: pointer;
+        user-select: none;
+        transition: transform 0.3s ease;
+      }
+      
+      /* if you spin it on open */
+      .menu-icon.open {
+        transform: rotate(90deg);
+      }
 
     nav a {
         display: flex;
@@ -777,6 +791,7 @@ footer {
     .random {
         display: none;
     }
+    
 }
 
 .btn1:hover,
